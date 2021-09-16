@@ -23,3 +23,6 @@ body {
   font-family: sans-serif;
 }
 
+.notification:not(:last-child){
+  margin-bottom: 0;
+}
