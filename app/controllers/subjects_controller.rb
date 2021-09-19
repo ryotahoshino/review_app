@@ -5,5 +5,6 @@ class SubjectsController < ApplicationController
 
   def show
     @subject = Subject.find(params[:id])
+    @review = Review.new
   end
 end
