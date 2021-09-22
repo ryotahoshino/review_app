@@ -10,7 +10,7 @@
         <span class="fa fa-star-o" id="star"></span>
         <span class="fa fa-star-o" id="star"></span>
       </div>
-      <div class="ml-3 rating-value-display"><span id="raing-value-display">0</span>/5</div>
+      <div class="ml-3 rating-value-display"><span id="rating-value-display">0</span>/5</div>
     </div>
     <%= f.hidden_field :subject_id, value: subject.id %>
     <%= f.hidden_field :score, id: "rating-value" %>
@@ -19,3 +19,5 @@
     <%= link_to "他のレビューを見る", subject_reviews_path(subject), class: "button ligth ml-3 mt-3" %>
   <% end %>
 </div>
+
+<%= javascript_pack_tag "reviews.js" %>
