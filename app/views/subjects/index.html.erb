@@ -22,8 +22,12 @@
               </div>
             </div>
             <footer class="card-footer">
-              レビューを見る
-              レビューを書く
+              <%= link_to subject_review_path(subject), class: "button card-footer-item" do %>
+                レビューを見る
+              <% end %>
+              <%= link_to subject_path(subject), class: "button card-footer-item" do %>
+                レビューを書く
+              <% end %>
             </footer>
           </div>
         <% end %>

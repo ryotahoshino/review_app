@@ -1,5 +1,5 @@
 <p class="is-size-4 mb-3">レビューを書く</p>
-<% if review.error.any? %>
+<% if review.errors.any? %>
   <div class="notification is-danger">
     <h2><%= review.errors.count %>件のエラーがあります。</h2>
     <ul>

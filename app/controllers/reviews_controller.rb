@@ -1,5 +1,7 @@
 class ReviewsController < ApplicationController
   def index
+    @subject = Subject.find(params[:subject_id])
+    @review = @subject.reviews
   end
 
   def create
