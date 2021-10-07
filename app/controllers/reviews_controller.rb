@@ -1,4 +1,5 @@
 class ReviewsController < ApplicationController
+  before_action :authenticate_user!, only: [:create]
   def index
     @subject = Subject.find(params[:subject_id])
     @review = @subject.reviews
