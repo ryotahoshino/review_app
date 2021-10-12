@@ -2,7 +2,7 @@ class ReviewsController < ApplicationController
   before_action :authenticate_user!, only: [:create]
   def index
     @subject = Subject.find(params[:subject_id])
-    @review = @subject.reviews
+    @reviews = @subject.reviews
   end
 
   def create
@@ -11,7 +11,7 @@ class ReviewsController < ApplicationController
     if @review.save
       redirect_to subject_reviews_path(@review.subject)
     else
-      @subject = Subject.find(params[:id])
+      @subject = Subject.find(params[:subject_id])
       render "subjects/show"
     end
   end
